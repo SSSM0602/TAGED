@@ -38,7 +38,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-third w3-center">
-      <img src = "https://i2.wp.com/rukodelieinfo.ru/wp-content/uploads/2018/02/Lisa-origami-35.jpg" width = "400"></i>
+      <img id = "origami" src = "https://i2.wp.com/rukodelieinfo.ru/wp-content/uploads/2018/02/Lisa-origami-35.jpg" width = "400" onmouseover="bigger()" onmouseout="smaller()"></i>
     </div>
   </div>
 </div>
@@ -56,8 +56,14 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+var pic = document.getElementById("origami");
+function bigger(){
+  pic.setAttribute("width", "620")
+}
+function smaller(){
+  pic.setAttribute("width", "400")
+}
 </script>
 
 </body>
 </html>
-
